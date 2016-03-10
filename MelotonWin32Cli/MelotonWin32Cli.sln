@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MelotonWin32Cli", "MelotonWin32Cli\MelotonWin32Cli.csproj", "{4B881DB6-6B08-48A4-8F3D-3414AD2D0B50}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "YHFSClientSetup", "Setup1\Setup1.vdproj", "{AC5529F5-3F3B-44C0-A1D8-0B2F59036593}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{4B881DB6-6B08-48A4-8F3D-3414AD2D0B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B881DB6-6B08-48A4-8F3D-3414AD2D0B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B881DB6-6B08-48A4-8F3D-3414AD2D0B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC5529F5-3F3B-44C0-A1D8-0B2F59036593}.Debug|Any CPU.ActiveCfg = Debug
+		{AC5529F5-3F3B-44C0-A1D8-0B2F59036593}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
