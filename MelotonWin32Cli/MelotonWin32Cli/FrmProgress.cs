@@ -55,14 +55,14 @@ namespace MelotonWin32Cli
         private void button1_Click(object sender, EventArgs e)
         {
             FileDialog fd = new SaveFileDialog();
-
+            fd.FileName = Path.GetFileName(uri);
             if(fd.ShowDialog() == DialogResult.OK )
             {
                 this.button1.Hide();
 
                 thr = new Thread(() =>
                 {
-                    fileStream = System.IO.File.Open(fd.FileName, System.IO.FileMode.OpenOrCreate | System.IO.FileMode.Truncate);
+                    fileStream = System.IO.File.Open(fd.FileName, System.IO.FileMode.OpenOrCreate);
                     int ret = meloton.GetFile(uri, fileStream);
                     if (ret > 0)
                     {
@@ -77,9 +77,12 @@ namespace MelotonWin32Cli
 
         private void FrmProgress_FormClosing(object sender, FormClosingEventArgs e)
         {
-            meloton.GetProgressCallback(null);
-            thr.Abort();
-            fileStream.Close();
+            if(meloton!=null)
+                meloton.GetProgressCallback(null);
+            if (thr != null)
+                thr.Abort();
+            if(fileStream!=null)
+                fileStream.Close();
         }
     }
 }
